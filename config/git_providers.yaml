@@ -1,0 +1,13 @@
+git_providers:
+  bitbucket:
+    - bitbucket-pipelines.yml
+  github:
+    - .github:
+      - workflows:
+        - test.yml
+  azure_devops:
+    - azure-pipelines.yml
+  gitlab:
+    - .gitlab
+    - .gitlab-ci-yml
+  none:
