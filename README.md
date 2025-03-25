@@ -1,6 +1,6 @@
 # Forge
 
-Forge is a powerful and flexible tool for building and managing your Golang projects. It provides a streamlined workflow for compiling, testing, and deploying your applications.
+Forge is a powerful and flexible tool for building and managing your Golang and python projects. It provides a streamlined workflow for compiling, testing, and deploying your applications.
 
 ## Features
 
@@ -15,7 +15,7 @@ Forge is a powerful and flexible tool for building and managing your Golang proj
 To install Forge, use the following command:
 
 ```bash
-go get github.com/yourusername/forge
+go get github.com/AidanInceer/forge
 ```
 
 ## Usage
@@ -30,4 +30,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or feedback, please open an issue on GitHub or contact us at support@forge.com.
+For any questions or feedback, please open an issue on GitHub.

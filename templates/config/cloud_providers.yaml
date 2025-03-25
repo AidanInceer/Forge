@@ -1,8 +1,0 @@
-cloud_providers: 
-  AWS:
-    - aws
-  GCP:
-    - gcp
-  AZURE:
-    - azure
-  none:

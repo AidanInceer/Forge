@@ -14,14 +14,24 @@ var startCmd = &cobra.Command{
 		start, _ := cmd.Flags().GetString("start")
 		fmt.Println("Forge activated:", start)
 
-		
 		rootLocation := getLocation()
 		ProjectName := getProjectName()
 		projectType := getProjectType()
 		gitProvider := getGitProvider()
 		cloudProvider := getCloudProvider()
 
-		fmt.Printf("Root Project: %s\nName: %s\nProject Type: %s\nGit Provider: %s\nCloud Provider: %s\n", rootLocation, ProjectName, projectType, gitProvider, cloudProvider)
+		conf := Config{
+			RootLocation:  rootLocation,
+			ProjectName:   ProjectName,
+			ProjectType:   projectType,
+			GitProvider:   gitProvider,
+			CloudProvider: cloudProvider,
+		}
+
+		// CreateProject(conf)
+		CreateProject(conf)
+
+		fmt.Printf("Root Project: %s\n", conf.RootLocation)
 	},
 }
 
