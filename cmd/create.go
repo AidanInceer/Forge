@@ -1,23 +1,8 @@
 package cmd
 
-import (
-	"fmt"
-	"os"
+func CreateProject(conf UserConfig) {
 
-	"gopkg.in/yaml.v3"
-)
-
-func CreateProject(conf Config) {
-	// read the yaml file
-	projectConfigPath := "./templates/config/config.yaml"
-
-	// load the yaml file
-	config, err := LoadProjectConfig(projectConfigPath)
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Printf("Loaded Project Config: %+v\n", config)
+	// read the the go config file
 
 	// create the folder at the roote location
 
@@ -31,21 +16,4 @@ func CreateProject(conf Config) {
 
 	// add default files
 
-}
-
-
-
-func LoadProjectConfig(filePath string) (*ProjectYaml, error) {
-	file, err := os.ReadFile(filePath)
-	if err != nil {
-		return nil, err
-	}
-
-	var config ProjectYaml
-	err = yaml.Unmarshal(file, &config)
-	if err != nil {
-		return nil, err
-	}
-
-	return &config, nil
 }

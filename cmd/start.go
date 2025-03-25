@@ -20,7 +20,7 @@ var startCmd = &cobra.Command{
 		gitProvider := getGitProvider()
 		cloudProvider := getCloudProvider()
 
-		conf := Config{
+		conf := UserConfig{
 			RootLocation:  rootLocation,
 			ProjectName:   ProjectName,
 			ProjectType:   projectType,
