@@ -28,14 +28,12 @@ var startCmd = &cobra.Command{
 			CloudProvider: cloudProvider,
 		}
 
+		fmt.Printf("Root Project: %s\n", conf.RootLocation)
 		// CreateProject(conf)
 		CreateProject(conf)
-
-		fmt.Printf("Root Project: %s\n", conf.RootLocation)
 	},
 }
 
 func init() {
 	startCmd.Flags().StringP("start", "s", "", "Starts the generation of a new project (config selection and setup)")
-	rootCmd.AddCommand(startCmd)
 }

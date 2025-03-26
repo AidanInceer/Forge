@@ -89,7 +89,6 @@ func getLocation() string {
 
 	// need to handle the case where the user is wants to change the location if even if it is already set
 	reset := resetLocation()
-	fmt.Println(reset)
 	if reset == "y" {
 		loc := overwriteLocation(config)
 		return loc
@@ -99,7 +98,6 @@ func getLocation() string {
 		locs := overwriteLocation(config)
 		return locs
 	}
-
 }
 
 func overwriteLocation(config baseConfig) string {
@@ -148,5 +146,4 @@ var placeCmd = &cobra.Command{
 
 func init() {
 	placeCmd.Flags().StringP("location", "l", ".", "Sets the absolute root path of the project for future projects by default e.g. in a .../coding/ folder")
-	rootCmd.AddCommand(placeCmd)
 }
